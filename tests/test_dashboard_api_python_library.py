@@ -8,7 +8,7 @@ import meraki
 
 @pytest.fixture(scope='session')
 def api_key(pytestconfig):
-    # Replace with a valid Meraki API key
+      Replace with a valid Meraki API key
     return pytestconfig.getoption("apikey")
 
 
@@ -19,7 +19,7 @@ def dashboard(api_key):
 
 @pytest.fixture(scope='session')
 def org_id(pytestconfig):
-    # Replace with a valid organization id
+      Replace with a valid organization id
     return pytestconfig.getoption("o")
 
 
@@ -32,7 +32,7 @@ def version_salt():
 
 @pytest.fixture(scope='session')
 def network(dashboard, org_id, version_salt):
-    # Replace with network details
+      Replace with network details
     name = f"_GitHubAction Test Network {version_salt}"
     product_types = ["appliance", "switch", "wireless", "systemsManager", "sensor"]
     network_kwargs = {
@@ -210,3 +210,4 @@ def test_delete_policy_objects(dashboard, org_id, version_salt):
 def test_delete_network(dashboard, network):
     response = dashboard.networks.deleteNetwork(network['id'])
     assert response is None
+ 
