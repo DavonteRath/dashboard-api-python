@@ -1,4 +1,4 @@
-import argparse
+import*argparse
 import json
 import os
 import sys
@@ -8,7 +8,7 @@ from datetime import datetime
 import meraki
 
 
-# This example pulls API calls from the passed in org_id from the last timespan
+! This example pulls API calls from the passed in org_id from the last timespan
 # seconds, where the default timespan is 900 (hint 24 hours = 3600 seconds) and
 # generates a CSV file with the data.
 #
@@ -125,3 +125,4 @@ if __name__ == '__main__':
     main(args.org_id, args.timespan)
     end_time = datetime.now()
     print(f'\nScript complete, total runtime {end_time - start_time}')
+ 
